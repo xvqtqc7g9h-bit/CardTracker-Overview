@@ -1,1 +1,42 @@
-CardCatalog_210_Pairs_PREVIEW.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>210 Pairs – 420 Cards Catalog</title>
+    <style>
+        body {font-family: Arial, sans-serif; background:#0d0d0d; color:#eee; padding:20px; text-align:center;}
+        h1 {color:#00ff88;}
+        .gallery {display:grid; grid-template-columns:repeat(auto-fill,minmax(380px,1fr)); gap:25px; margin-top:40px;}
+        .pair {background:#1a1a1a; padding:20px; border-radius:12px; box-shadow:0 0 20px #00ff88 inset;}
+        .pair h3 {margin:0 0 15px; color:#00ff88; font-size:1.4em;}
+        .card img {width:100%; max-width:340px; border:3px solid #00ff88; border-radius:10px; box-shadow:0 0 15px #00ff8822;}
+        .card p {margin:8px 0 0; font-size:95%; color:#aaa;}
+    </style>
+</head>
+<body>
+    <h1>AAAippics Complete Catalog – 210 Pairs (420 Cards)</h1>
+    <p>Generated Nov 17 2025 – deduped except intentional doubles – sorted</p>
+    <div class="gallery">
+        <script>
+            for(let i=1; i<=210; i++){
+                let n = String(i).padStart(3,'0');
+                document.write(`
+                    <div class="pair">
+                        <h3>Pair ${i}</h3>
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/xvqtqc7g9h-bit/CardTracker-Overview/main/docs/thumbs/AAA${n}_front_thumb.jpg" alt="Pair ${i} Front">
+                            <p>AAA${n}_front.jpg</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/xvqtqc7g9h-bit/CardTracker-Overview/main/docs/thumbs/AAA${n}_back_thumb.jpg" alt="Pair ${i} Back">
+                            <p>AAA${n}_back.jpg</p>
+                        </div>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+    <p><strong>All done!</strong> Both files are now permanent in your repo.</p>
+</body>
+</html>
